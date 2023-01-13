@@ -1,0 +1,218 @@
+---
+permalink: online-help/concept-managing-performance-service-levels.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un niveau de service de performances vous permet de définir les objectifs de performances et de stockage d"une charge de travail. Vous pouvez attribuer un niveau de service de performances à une charge de travail lors de la création initiale de la charge de travail ou ensuite en modifiant la charge de travail.' 
+---
+= Gestion des niveaux de service de performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un niveau de service de performances vous permet de définir les objectifs de performances et de stockage d'une charge de travail. Vous pouvez attribuer un niveau de service de performances à une charge de travail lors de la création initiale de la charge de travail ou ensuite en modifiant la charge de travail.
+
+La gestion et la surveillance des ressources de stockage reposent sur des objectifs de niveau de service (SLO). Les SLO sont définis par des contrats de niveau de service basés sur les performances et la capacité. Dans Unified Manager, les SLO font référence aux définitions des niveaux de service pour les performances des applications exécutées sur un stockage NetApp. Les services de stockage sont différenciés en fonction des performances et de l'utilisation des ressources sous-jacentes. Un niveau de service de performances fait une description des objectifs du service de stockage. Un niveau de service de performances permet au fournisseur de stockage de spécifier les objectifs de performance et de capacité pour la charge de travail.
+
+Unified Manager propose quelques niveaux de service prédéfinis (ou prédéfinis) pour les performances et la valeur extrêmes. Les niveaux de service Extreme Performance, Performance, Value Performance sont adaptés à la plupart des charges de travail de stockage courantes d'un data Center. Unified Manager propose également trois niveaux de service haute performance pour les applications de base de données : extrêmes pour les journaux de bases de données, Extreme pour les données partagées de bases de données et Extreme pour les données de base de données. Il s'agit de niveaux de service haute performance extrêmement élevés qui prennent en charge les IOPS en rafales et sont adaptés aux applications de base de données présentant le débit le plus élevé. Si ces niveaux de service de performances prédéfinis ne répondent pas à vos exigences, vous pouvez créer de nouveaux niveaux de service de performances en fonction de la définition des niveaux de service de performances prédéfinis.
+
+Vous pouvez accéder aux niveaux de service de performances à partir de la page *Policies* > *niveaux de service de performance* et en utilisant les API du fournisseur de stockage. Il convient de gérer les charges de travail de stockage en leur affectant des niveaux de services de performance, car il n'est pas nécessaire de gérer séparément les charges de travail. Toutes les modifications peuvent également être gérées en réaffectant un autre niveau de service de performance au lieu de les gérer individuellement.
+
+Vous ne pouvez pas modifier un niveau de service de performances défini par le système ou actuellement affecté à une charge de travail. Vous ne pouvez pas supprimer un PSL qui est affecté à une charge de travail ou s'il s'agit du seul niveau de service de performance disponible.
+
+La page niveaux de service de performances répertorie les règles de niveau de service de performance disponibles et vous permet de les ajouter, de les modifier et de les supprimer. Cette page affiche les informations suivantes :
+
+[cols="1a,1a"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom
+ a| 
+Nom du niveau de service Performance.
+
+
+
+ a| 
+Type
+ a| 
+Indique si la règle est définie par le système ou par l'utilisateur.
+
+
+
+ a| 
+IOPS attendues
+ a| 
+Nombre minimal d'IOPS qu'une application doit exécuter sur une LUN ou un partage de fichiers. Les IOPS attendues indiquent la quantité minimale d'IOPS allouées, en fonction de la taille allouée à l'objet de stockage.
+
+
+
+ a| 
+IOPS en pic
+ a| 
+Nombre maximal d'IOPS qu'une application peut exécuter sur une LUN ou un partage de fichiers. Les IOPS en pics indiquent les IOPS maximales allouées, en fonction de la taille de l'objet de stockage ou de la taille de l'objet de stockage utilisé.
+
+Les pics d'activité d'IOPS sont basés sur une règle d'allocation. La règle d'allocation est l'espace alloué ou l'espace utilisé. Lorsque la règle d'allocation est définie sur l'espace alloué, les IOPS de pointe sont calculées en fonction de la taille de l'objet de stockage. Lorsque la règle d'allocation est définie sur l'espace utilisé, les IOPS maximales sont calculées en fonction de la quantité de données stockées dans l'objet de stockage, en tenant compte des fonctionnalités d'efficacité du stockage. Par défaut, la règle d'allocation est définie sur l'espace utilisé.
+
+
+
+ a| 
+IOPS minimales absolues
+ a| 
+La valeur d'IOPS minimale absolue, utilisée comme valeur prioritaire lorsque le nombre d'IOPS attendu est inférieur à cette valeur. La valeur peut être comprise entre 400 et 1000. La plage d'IOPS minimales absolues est calculée comme suit :
+
+Valeur minimale = 1000/ latence attendue
+
+Les valeurs par défaut des niveaux de service de performances définis par le système sont calculées comme suit :
+
+* Performances extrêmes : si le nombre d'IOPS attendu est supérieur à 6144/To, la valeur d'IOPS minimale absolue est égale à 1000
+* Performances : si les IOPS prévues sont >= 2048/To et < 6144/To, la valeur d'IOPS minimale absolue est égale à 500
+* Valeur : si IOPS attendu >= 128/To et < 2048/To, la valeur d'IOPS minimale absolue est égale à 75
+
+
+Les valeurs par défaut des niveaux de service performances de la base de données définie par le système sont calculées comme suit :
+
+* Extreme pour les journaux de base de données : si attendue d'IOPS >= 22528, alors la valeur d'IOPS minimale absolue est égale à 4000
+* Extrême pour les données partagées de bases de données : si le nombre d'IOPS attendu est supérieur à 16384, la valeur d'IOPS minimale absolue est égale à 2000
+* Extrême pour les données de base de données : si le nombre d'IOPS attendu est supérieur à 12288, la valeur d'IOPS minimale absolue est égale à 2000
+
+
+
+
+ a| 
+Latence attendue
+ a| 
+Latence attendue pour les IOPS de stockage en millisecondes par opération (ms/opération).
+
+
+
+ a| 
+Puissance
+ a| 
+Capacité totale disponible et utilisée dans les clusters.
+
+
+
+ a| 
+Charges de travail
+ a| 
+Nombre de charges de travail de stockage qui ont reçu le niveau de service Performance.
+
+|===
+Si des charges de travail dépassent la valeur de latence prévue pour 30 % de la durée de l'heure précédente, Unified Manager génère l'un des événements suivants pour vous informer d'un problème de performance potentiel : « Seuil de latence du volume de la charge de travail dépassé, tel que défini par la politique de niveau de service de performances » ou « seuil de latence du LUN de la charge de travail violé tel que défini par la politique de niveau de services de performances ».
+
+Le tableau suivant fournit des informations sur les niveaux de service de performances définis par le système :
+
+[cols="1a,1a,1a,1a,1a,1a"]
+|===
+| Niveau de service de performances | Description et cas d'utilisation | Latence attendue (ms/opérations) | IOPS en pic | IOPS attendues | IOPS minimales absolues 
+
+
+ a| 
+Performances exceptionnelles
+ a| 
+Offre un débit extrêmement élevé à une latence très faible
+
+Idéal pour les applications sensibles à la latence
+ a| 
+1
+ a| 
+12288
+ a| 
+6144
+ a| 
+1000
+
+
+
+ a| 
+Performance
+ a| 
+Garantit un débit élevé à une faible latence
+
+Idéal pour les bases de données et les applications virtualisées
+ a| 
+2
+ a| 
+4096
+ a| 
+2048
+ a| 
+500
+
+
+
+ a| 
+Valeur
+ a| 
+Fournit une capacité de stockage élevée et une latence modérée
+
+Idéal pour les applications haute capacité telles que la messagerie, le contenu web, les partages de fichiers et les cibles de sauvegarde
+ a| 
+17
+ a| 
+512
+ a| 
+128
+ a| 
+75
+
+
+
+ a| 
+Extrême pour les journaux de base de données
+ a| 
+Assure un débit maximal à la latence la plus faible.
+
+Idéal pour les applications de base de données prenant en charge les journaux de base de données Ce PSL fournit le débit le plus élevé car les journaux de base de données sont extrêmement en rafales et la consignation est constamment à la demande.
+ a| 
+1
+ a| 
+45056
+ a| 
+22528
+ a| 
+4000
+
+
+
+ a| 
+Extrême pour les données partagées de bases de données
+ a| 
+Fournit un débit très élevé avec la latence la plus faible.
+
+Idéal pour les données d'applications de bases de données stockées dans un datastore commun, mais partagées entre bases de données.
+ a| 
+1
+ a| 
+32768
+ a| 
+16384
+ a| 
+2000
+
+
+
+ a| 
+Extrême pour les données de base de données
+ a| 
+Fournit un débit élevé à la latence la plus faible.
+
+Idéal pour les données d'applications de base de données, telles que les informations de table de base de données et les métadonnées.
+ a| 
+1
+ a| 
+24576
+ a| 
+12288
+ a| 
+2000
+
+|===
+
+
+== Instructions de création d'un niveau de service de performances personnalisé
+
+Si les niveaux de service de performances existants ne répondent pas aux exigences de l'objectif de niveau de service pour vos charges de travail de stockage, vous pouvez créer un niveau de service de performances personnalisé. Cependant, il est recommandé d'utiliser les niveaux de service de performance définis par le système pour vos charges de travail de stockage et de créer uniquement des niveaux de services de performances personnalisés, si nécessaire.

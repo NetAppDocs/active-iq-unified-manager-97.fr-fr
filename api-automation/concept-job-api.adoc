@@ -1,0 +1,38 @@
+---
+permalink: api-automation/concept-job-api.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dans Active IQ Unified Manager, des opérations telles que l"ajout et la modification de ressources sont réalisées par des invocations API synchrones et asynchrones. Les invocations planifiées pour une exécution asynchrone peuvent être suivies par un objet Job créé pour cette invocation. Chaque objet Job possède une clé unique d"identification. Chaque objet travail renvoie l"URI de l"objet travail pour vous permettre d"accéder à et de suivre la progression du travail. Vous pouvez utiliser cette API pour récupérer les détails de chaque exécution.' 
+---
+= Affichage des travaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans Active IQ Unified Manager, des opérations telles que l'ajout et la modification de ressources sont réalisées par des invocations API synchrones et asynchrones. Les invocations planifiées pour une exécution asynchrone peuvent être suivies par un objet Job créé pour cette invocation. Chaque objet Job possède une clé unique d'identification. Chaque objet travail renvoie l'URI de l'objet travail pour vous permettre d'accéder à et de suivre la progression du travail. Vous pouvez utiliser cette API pour récupérer les détails de chaque exécution.
+
+Vous pouvez interroger tous les objets travail. Vous pouvez également utiliser la clé de travail et les détails de l'objet travail pour exécuter l'ensemble d'opérations suivant sur les ressources.
+
+
+
+== Afficher les travaux
+
+Vous pouvez utiliser cette méthode pour obtenir une liste de tous les travaux. Le corps de réponse comprend les détails du travail de toutes les tâches. Vous pouvez également afficher les détails d'un objet travail particulier en spécifiant la clé travail dans l'URI. Le corps de réponse comprend les détails identifiés par la touche poste. Dans la réponse, le dernier objet travail est renvoyé au haut. Si vous souhaitez interroger un objet travail particulier, entrez l'ID du travail.
+
+[cols="1a,1a,1a"]
+|===
+| Catégorie | Verbe HTTP | Chemin 
+
+
+ a| 
+serveur-gestion
+ a| 
+OBTENEZ
+ a| 
+`/management-server/jobs`
+
+`+/management-server/jobs/{key}+`
+
+|===

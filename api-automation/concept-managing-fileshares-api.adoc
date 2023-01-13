@@ -1,0 +1,107 @@
+---
+permalink: api-automation/concept-managing-fileshares-api.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser les API répertoriées ici pour afficher, ajouter et supprimer des partages CIFS et des partages de fichiers NFS. Ces API vous permettent également d"attribuer et de modifier les règles de performance du niveau de service et d"efficacité du stockage pour les partages de fichiers.' 
+---
+= Gestion des partages de fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les API répertoriées ici pour afficher, ajouter et supprimer des partages CIFS et des partages de fichiers NFS. Ces API vous permettent également d'attribuer et de modifier les règles de performance du niveau de service et d'efficacité du stockage pour les partages de fichiers.
+
+Avant d'affecter le stockage, la machine virtuelle doit avoir été créée et provisionnée avec les protocoles pris en charge. De même, pour l'attribution de règles d'efficacité du stockage aux partages de fichiers, vous devez créer les règles d'efficacité du stockage avant de créer les partages de fichiers.
+
+
+
+== Afficher les partages de fichiers
+
+Vous pouvez utiliser la méthode suivante pour afficher toutes les charges de travail de stockage disponibles dans votre environnement Unified Manager. Lorsque vous avez ajouté un cluster ONTAP en tant que source de données sur Active IQ Unified Manager, les charges de travail de stockage de ces clusters sont automatiquement ajoutées à votre instance Unified Manager. Cette API récupère tous les partages de fichiers automatiquement et ajoutée manuellement à votre instance Unified Manager. Vous pouvez afficher les détails d'un partage de fichiers spécifique en exécutant cette API avec la clé de partage de fichiers.
+
+[cols="1a,1a,1a"]
+|===
+| Catégorie | Verbe HTTP | Chemin 
+
+
+ a| 
+fournisseur de stockage
+ a| 
+OBTENEZ
+ a| 
+`/storage-provider/file-shares`
+
+`+/storage-provider/file-shares/{key}+`
+
+|===
+
+
+== Ajouter des partages de fichiers
+
+Vous pouvez utiliser la méthode suivante pour ajouter des partages de fichiers CIFS et NFS à votre SVM. Vous devez entrer les détails du partage de fichiers que vous souhaitez créer, en tant que paramètres d'entrée. Vous ne pouvez pas utiliser cette API pour la création de FlexGroups.
+
+[cols="1a,1a,1a"]
+|===
+| Catégorie | Verbe HTTP | Chemin 
+
+
+ a| 
+fournisseur de stockage
+ a| 
+POST
+ a| 
+`/storage-provider/file-shares`
+
+|===
+[NOTE]
+====
+Selon que les paramètres de la liste de contrôle d'accès (ACL) ou des paramètres de export policy sont fournis, les partages CIFS ou les partages de fichiers NFS sont créés. Si vous ne fournissez pas les valeurs des paramètres ACL, les partages CIFS ne sont pas créés et les partages NFS sont créés par défaut, fournissant ainsi un accès à tous.
+
+====
+
+
+== Supprimer des partages de fichiers
+
+Vous pouvez utiliser la méthode suivante pour supprimer un partage de fichiers spécifique. Vous devez saisir la clé de partage de fichiers comme paramètre d'entrée pour supprimer un partage de fichiers particulier.
+
+[cols="1a,1a,1a"]
+|===
+| Catégorie | Verbe HTTP | Chemin 
+
+
+ a| 
+fournisseur de stockage
+ a| 
+SUPPRIMER
+ a| 
+`+/storage-provider/file-shares/{key}+`
+
+|===
+
+
+== Modifier les partages de fichiers
+
+Vous pouvez utiliser la méthode suivante pour modifier un partage de fichiers et mettre à jour ses propriétés.
+
+Vous devez fournir la clé de partage de fichiers pour modifier un partage de fichiers particulier. En outre, vous devez entrer la propriété que vous souhaitez mettre à jour, ainsi que sa valeur.
+
+[NOTE]
+====
+Notez que vous ne pouvez mettre à jour qu'une seule propriété à une seule invocation de cette API. Pour plusieurs mises à jour, vous devez exécuter cette API autant de fois.
+
+====
+[cols="1a,1a,1a"]
+|===
+| Catégorie | Verbe HTTP | Chemin 
+
+
+ a| 
+fournisseur de stockage
+ a| 
+CORRECTIF
+ a| 
+`+/storage-provider/file-shares/{key}+`
+
+|===

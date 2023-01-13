@@ -1,0 +1,76 @@
+---
+permalink: online-help/task-exporting-storage-data-as-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez exporter des données vers un fichier de valeurs séparées par des virgules \(.csv\) ou un document \(.PDF\), et utiliser les données exportées pour créer des rapports. Par exemple, si 10 événements critiques n"ont pas été résolus, vous pouvez exporter les données depuis la page d"inventaire de gestion des événements pour créer un rapport, puis prendre les mesures nécessaires.' 
+---
+= Exportation de données vers des fichiers CSV et PDF à des fins de reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez exporter des données vers des valeurs séparées par des virgules (`.csv`) fichier ou (`.pdf`) document, et utilisez les données exportées pour créer des rapports. Par exemple, si 10 événements critiques n'ont pas été résolus, vous pouvez exporter les données depuis la page d'inventaire de gestion des événements pour créer un rapport, puis prendre les mesures nécessaires.
+
+
+
+== Description de la tâche
+
+Vous pouvez exporter des données vers un `.csv` fichier ou `.pdf` Documentez à partir des pages d'inventaire stockage, réseau et qualité de service et utilisez les données exportées pour créer des rapports.
+
+
+
+== Étapes
+
+. Effectuez l'une des opérations suivantes :
++
+[cols="1a,1a"]
+|===
+| Pour exporter... | Procédez comme ça... 
+
+
+ a| 
+Détails de l'événement
+ a| 
+Cliquez sur *Event Management* dans le menu de navigation gauche.
+
+
+
+ a| 
+Détails de l'inventaire des objets de stockage
+ a| 
+Cliquez sur *Storage* ou *Network* dans le menu de navigation gauche, puis sélectionnez un objet de stockage. Choisissez ensuite l'une des vues *Santé*, *capacité*, *Performance* ou *relation*.
+
+
+
+ a| 
+Détails de l'historique de la capacité de stockage et de la protection
+ a| 
+Cliquez sur *Storage* > *Aggregates* ou *Storage* > *volumes*, puis sélectionnez un seul agrégat ou volume.
+
+
+
+ a| 
+Les performances des 10 principaux objets de stockage sont détaillées
+ a| 
+Cliquez sur *Storage* > *clusters* > *Performance/tous les clusters*, puis sélectionnez un cluster et choisissez l'onglet *meilleurs exécutants*. Sélectionnez ensuite un objet de stockage et le compteur de performances.
+
+
+
+ a| 
+Détails sur le groupe de règles de qualité de service
+ a| 
+Cliquez sur *Storage* > *QoS Policy Groups* dans le menu de navigation gauche.
+
+|===
+. Cliquez sur le bouton *Exporter*.
+. Cliquez sur *fichier CSV* ou *document PDF* pour confirmer la demande d'exportation.
++
+Dans l'onglet Top Performers, vous pouvez choisir de télécharger un rapport des statistiques pour le cluster que vous consultez ou pour tous les clusters du centre de données.
+
++
+Le fichier est téléchargé.
+
+. Ouvrez le `.csv` fichier ou `.pdf` documenter dans l'application appropriée.
+

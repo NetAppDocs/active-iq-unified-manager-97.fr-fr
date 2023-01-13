@@ -1,0 +1,78 @@
+---
+permalink: online-help/task-viewing-and-adding-vcenter-servers.html 
+sidebar: sidebar 
+keywords: vCenter server 
+summary: 'Pour afficher et dépanner les performances des machines virtuelles \(VM\), les vCenters associés doivent être ajoutés à votre instance Active IQ Unified Manager.' 
+---
+= Affichage et ajout de serveurs vCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour afficher et dépanner les performances des machines virtuelles (VM), les centres virtuels associés doivent être ajoutés à votre instance Active IQ Unified Manager.
+
+
+
+== Avant de commencer
+
+Avant d'ajouter ou de visualiser les vCenters, assurez-vous que :
+
+* Vous connaissez les noms vCenter.
+* Les vCenters sont accessibles pour une découverte réussie.
+* Vous connaissez l'adresse IP et possédez les identifiants lors de l'ajout de vCenter. Les identifiants doivent être d'un administrateur vCenter ou d'un utilisateur root disposant d'un accès en lecture seule à vCenter.
+* Le vCenter que vous souhaitez ajouter exécute vSphere 6.5 ou une version ultérieure.
+* Le paramètre de collecte de données du serveur vCenter est défini sur le niveau 3 pour un intervalle de 5 minutes
+* Les valeurs de latence dans vCenter sont configurées en millisecondes, et non en microsecondes, pour des calculs réussis des valeurs de latence.
+* L'heure du vCenter appartient au fuseau horaire du vCenter.
+
+
+
+
+== Description de la tâche
+
+Pour chaque vCenter ajouté et découvert, Unified Manager collecte les données de configuration, telles que les informations des serveurs vCenter et ESXi, le mappage des ONTAP, les détails du datastore et le nombre de machines virtuelles hébergées. Elle collecte en outre les mesures de performances des composants.
+
+
+
+== Étapes
+
+. Accédez à *VMWARE* > *vCenter* et vérifiez si votre vCenter est disponible dans la liste.
++
+[NOTE]
+====
+Si votre vCenter n'est pas disponible, vous devez l'ajouter.
+
+====
++
+.. Cliquez sur *Ajouter*.
+.. Ajoutez l'adresse IP correcte pour vCenter et assurez-vous que le périphérique est accessible.
+.. Ajoutez le nom d'utilisateur et le mot de passe de l'administrateur ou de l'utilisateur root avec un accès en lecture seule à vCenter.
+.. Ajoutez le numéro de port personnalisé si vous utilisez un port autre que le port par défaut `443`.
+.. Cliquez sur *Enregistrer*. Une fois la détection réussie, un certificat de serveur s'affiche pour vous permettre d'accepter.
++
+Lorsque vous acceptez le certificat, vCenter est ajouté à la liste des vCenters disponibles. L'ajout du périphérique n'entraîne pas la collecte de données pour les machines virtuelles associées, et la collecte s'effectue aux intervalles programmés.
+
+
+
+. Si votre vCenter est disponible sur la page *vCenters*, vérifiez son état. Lorsque vous passez votre souris sur le champ *Status* (État*), vous pouvez indiquer si votre vCenter fonctionne comme prévu ou si un avertissement ou une erreur se produit.
++
+[NOTE]
+====
+L'ajout de vCenter vous permet d'afficher les États suivants. Toutefois, les données de performance et de latence des VM correspondantes peuvent prendre jusqu'à une heure après l'ajout du vCenter pour qu'il soit correctement mis en compte.
+
+====
++
+** Vert : normal, indiquant que vCenter a été découvert et que les indicateurs de performance ont été collectés avec succès
+** Jaune : avertissement (par exemple, lorsque le niveau de statistiques du serveur vCenter n'a pas été défini sur 3 ou plus pour obtenir des statistiques pour chaque objet)
+** Orange : erreur (indique toute erreur interne, telle qu'une exception, un échec dans la collecte de données de configuration ou le vCenter inaccessible) vous pouvez cliquer sur l'icône d'affichage de colonne (*Afficher/Masquer*) pour afficher le message d'état d'un vCenter et résoudre le problème.
+
+
+. Si vCenter est inaccessible ou si les informations d'identification ont été modifiées, modifiez les détails de vCenter. Sélectionnez le serveur vCenter, puis cliquez sur *Modifier*.
+. Apportez les modifications nécessaires sur la page *Modifier VMware vCenter Server*.
+. Cliquez sur *Enregistrer*.
++
+Une fois la découverte réussie, l'état de vCenter change.
+
+

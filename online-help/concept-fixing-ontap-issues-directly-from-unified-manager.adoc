@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-fixing-ontap-issues-directly-from-unified-manager.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: 'Depuis Unified Manager 9.7, vous pouvez corriger certains problèmes ONTAP directement depuis l"interface utilisateur d"Unified Manager, au lieu d"utiliser ONTAP System Manager ou l"interface de ligne de commande d"ONTAP.' 
+---
+= Résolution des problèmes ONTAP directement dans Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depuis Unified Manager 9.7, vous pouvez corriger certains problèmes ONTAP directement depuis l'interface utilisateur d'Unified Manager, au lieu d'utiliser ONTAP System Manager ou l'interface de ligne de commande d'ONTAP.
+
+Une nouvelle fonctionnalité appelée « actions de gestion » apporte des correctifs à un certain nombre de problèmes ONTAP qui ont déclenché des événements d'Unified Manager. Les actions de gestion sont disponibles à partir du tableau de bord, de la page Détails de l'événement et de la sélection analyse de la charge de travail dans le menu de navigation de gauche.
+
+Unified Manager effectue un diagnostic approfondi et permet sa résolution unique. Lorsqu'elles sont disponibles, ces résolutions sont affichées dans les actions de gestion avec un bouton *Fix it*. Cliquez sur le bouton *Fix it* pour résoudre le problème.
+
+Unified Manager envoie les commandes ONTAP au cluster pour effectuer le correctif demandé. Lorsque la réparation est terminée, l'événement est obsolète.

@@ -1,0 +1,84 @@
+---
+permalink: online-help/concept-managing-storage-efficiency-policies.html 
+sidebar: sidebar 
+keywords: add 
+summary: 'La stratégie d"efficacité du stockage \(SEP\) vous permet de définir les caractéristiques d"efficacité du stockage d"une charge de travail. Vous pouvez affecter une stratégie d"efficacité du stockage à une charge de travail lors de la création initiale de la charge de travail ou en modifiant la charge de travail.' 
+---
+= Gestion des règles d'efficacité du stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une stratégie d'efficacité du stockage (SEP) vous permet de définir les caractéristiques d'efficacité du stockage d'une charge de travail. Vous pouvez affecter une stratégie d'efficacité du stockage à une charge de travail lors de la création initiale de la charge de travail ou en modifiant la charge de travail.
+
+L'efficacité du stockage comprend plusieurs technologies, telles que le provisionnement fin, la déduplication et la compression des données, qui augmentent l'utilisation du stockage et diminuent les coûts du stockage. Lors de la création de règles d'efficacité du stockage, vous pouvez exploiter ces technologies gain d'espace, individuellement ou conjointement, pour optimiser l'efficacité du stockage. Lorsque vous associez les règles à vos charges de travail de stockage, les paramètres de règles spécifiés leur sont affectés. Unified Manager vous permet d'attribuer des règles d'efficacité du stockage définies par l'utilisateur et par système afin d'optimiser les ressources de stockage de votre data Center.
+
+Unified Manager propose deux règles d'efficacité du stockage définies par le système : élevée et faible. Ces PPE sont applicables à la plupart des charges de travail de stockage d'un centre de données. Toutefois, vous pouvez créer vos propres politiques si les PPE définies par le système ne répondent pas à vos exigences.
+
+Vous ne pouvez pas modifier une règle d'efficacité du stockage définie par le système ou actuellement attribuée à une charge de travail. Vous ne pouvez pas supprimer une règle d'efficacité du stockage qui est attribuée à une charge de travail ou s'il s'agit de la seule stratégie d'efficacité du stockage disponible.
+
+La page règles d'efficacité du stockage répertorie les politiques d'efficacité du stockage disponibles et vous permet d'ajouter, de modifier et de supprimer des PPE personnalisées. Cette page affiche les informations suivantes :
+
+[cols="1a,1a"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom
+ a| 
+Nom de la politique d'efficacité du stockage.
+
+
+
+ a| 
+Type
+ a| 
+Indique si la règle est définie par le système ou par l'utilisateur.
+
+
+
+ a| 
+Réserve d'espace
+ a| 
+Indique si le volume a un provisionnement fin ou non fin.
+
+
+
+ a| 
+Déduplication
+ a| 
+Si la déduplication est activée sur le volume :
+
+* `Inline`: La déduplication se produit lors de l'écriture sur le volume
+* `Background`: La déduplication est effectuée en arrière-plan
+* `Disable`: La déduplication est désactivée sur le volume
+
+
+
+
+ a| 
+Compression
+ a| 
+Si la compression des données est activée sur le volume :
+
+* `Inline`: La compression des données se produit lors de l'écriture sur le volume
+* `Background`: La compression des données se produit en arrière-plan
+* `Disable`: La compression des données est désactivée sur le volume
+
+
+
+
+ a| 
+Charges de travail
+ a| 
+Nombre de charges de travail de stockage attribuées à la règle d'efficacité du stockage
+
+|===
+
+
+== Instructions de création d'une stratégie d'efficacité du stockage personnalisée
+
+Si les règles existantes d'efficacité du stockage ne répondent pas aux exigences de règles pour vos charges de travail de stockage, vous pouvez créer une règle personnalisée d'efficacité du stockage. Toutefois, il est recommandé d'utiliser les règles d'efficacité du stockage définies par le système pour vos charges de travail de stockage et de créer uniquement des stratégies d'efficacité du stockage personnalisées si nécessaire.

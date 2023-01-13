@@ -1,0 +1,32 @@
+---
+permalink: online-help/concept-network-interface-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La page Explorateur d"interfaces réseau/performances fournit une présentation détaillée des performances de toutes les LIF d"un cluster.' 
+---
+= Explorateur d'interfaces réseau/performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page Explorateur d'interfaces réseau/performances fournit une présentation détaillée des performances de toutes les LIF d'un cluster.
+
+La page de l'explorateur d'interfaces réseau/Performance vous permet de suivre et de comparer les performances de vos LIF sur une période donnée, ce qui vous aide à résoudre vos problèmes et à ajuster les performances de vos LIF.
+
+La fonctionnalité View and compare permet de comparer les performances de cette interface réseau avec :
+
+* Autres LIFs qui sont sur le même port
+* Autres LIF qui se trouvent sur le même SVM
+* Le port sur lequel réside la LIF
+* SVM sur lequel réside la LIF
+
+
+La page Explorateur d'interfaces réseau/performances vous permet d'effectuer les opérations suivantes :
+
+* Afficher les problèmes liés aux seuils et leurs détails
+* Suivre et comparer les données de performances LIF
+* Examiner et résoudre les problèmes liés aux seuils
+* Examiner et résoudre les problèmes de performances
+

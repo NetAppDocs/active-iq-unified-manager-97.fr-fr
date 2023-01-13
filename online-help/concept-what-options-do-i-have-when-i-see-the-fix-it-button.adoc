@@ -1,0 +1,52 @@
+---
+permalink: online-help/concept-what-options-do-i-have-when-i-see-the-fix-it-button.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: Le bouton réparer permet de résoudre un problème signalé par Unified Manager par un événement. 
+---
+= Quelles sont les options qui s'offrent lorsque je vois le bouton réparer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le bouton *Fix it* permet de résoudre un problème signalé par Unified Manager par un événement.
+
+Nous vous recommandons de cliquer sur le bouton *Fix it* pour résoudre le problème lorsqu'il est disponible. Toutefois, si vous n'êtes pas sûr de vouloir résoudre le problème comme recommandé par Unified Manager, vous pouvez effectuer les actions suivantes :
+
+[cols="1a,1a"]
+|===
+| Que souhaitez-vous faire ? | Action 
+
+
+ a| 
+Demandez à Unified Manager de résoudre le problème.
+ a| 
+Cliquez sur le bouton *Fix it*.
+
+
+
+ a| 
+Ne corrigez pas le problème pour le moment et ne masquez pas cette action de gestion.
+ a| 
+Cliquez sur la flèche vers le bas et cliquez sur *rejeter*.
+
+
+
+ a| 
+Affichez les détails de cet événement pour mieux comprendre le problème.
+ a| 
+Cliquez sur la flèche vers le bas et cliquez sur *Afficher les détails de l'événement* pour afficher la page Détails de l'événement.
+
+
+
+ a| 
+Affichez les détails de cet objet de stockage pour mieux comprendre le problème.
+ a| 
+Cliquez sur le nom de l'objet de stockage pour afficher des détails dans la page Performance Explorer ou Health Details.
+
+|===
+Avant de cliquer sur le bouton *Fix it*, vous devez noter le nom de l'objet (par exemple « cluster fas8040-206 » ou « volume phil_DB ») Vous pourrez vérifier ultérieurement la liste des événements pour vérifier que l'événement correspondant est à l'état Obsolète, ce qui signifie que le correctif a réussi.
+
+Dans certains cas, la correction est reflétée dans l'interrogation de configuration de 15 minutes suivante. Dans d'autres cas, il peut prendre jusqu'à 24 heures pour vérifier la modification de configuration et pour l'événement à remplacer.

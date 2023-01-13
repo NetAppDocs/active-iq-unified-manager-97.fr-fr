@@ -1,0 +1,58 @@
+---
+permalink: reporting/task-scheduling-a-report.html 
+sidebar: sidebar 
+keywords: sample report schedule 
+summary: Une fois que vous avez une vue que vous souhaitez planifier pour la génération et la distribution régulières en tant que rapport, vous pouvez planifier le rapport. 
+---
+= Planification d'un rapport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois que vous avez une vue que vous souhaitez planifier pour la génération et la distribution régulières en tant que rapport, vous pouvez planifier le rapport.
+
+
+
+== Avant de commencer
+
+* Vous devez avoir le rôle Administrateur d'applications ou Administrateur de stockage.
+* Vous devez avoir configuré les paramètres du serveur SMTP dans la page *général* > *Notifications* pour que le moteur de génération de rapports puisse envoyer des rapports sous forme de pièces jointes d'e-mail à la liste des destinataires à partir du serveur Unified Manager.
+* Le serveur de messagerie doit être configuré pour permettre l'envoi de pièces jointes avec les e-mails générés.
+
+
+
+
+== Description de la tâche
+
+Procédez comme suit pour tester et planifier la génération d'un rapport pour une vue. Sélectionnez ou personnalisez la vue que vous souhaitez utiliser. La procédure suivante utilise une vue réseau affichant les performances de vos interfaces réseau, mais vous pouvez utiliser n'importe quelle vue que vous souhaitez.
+
+
+
+== Étapes
+
+. Ouvrez votre vue. Cet exemple utilise la vue réseau par défaut qui affiche les performances LIF. Dans le volet de navigation de gauche, cliquez sur réseau** > *interfaces réseau*.
+. Personnalisez la vue selon vos besoins.
+. Après avoir personnalisé la vue, vous pouvez fournir un nom unique dans le champ *View* et cliquer sur la coche pour l'enregistrer.
++
+image::../media/view-save.gif[afficher enregistrement]
+
+. Téléchargez le rapport sous forme de fichier *CSV* ou *PDF* pour voir le résultat avant de le planifier ou de le partager.
++
+Ouvrez le fichier avec une application installée, telle que Microsoft Excel (CSV) ou Adobe Acrobat (PDF).
+
+. Si vous êtes satisfait du rapport, cliquez sur *Rapports planifiés*.
+. Dans la page *Report Schedules*, cliquez sur *Add Schedule*.
+. Acceptez le nom par défaut, qui est une combinaison du nom de la vue et de la fréquence, ou personnalisez le *nom du programme*.
+. Pour tester le rapport planifié la première fois, ajoutez-vous uniquement comme *destinataire*. Lorsque vous êtes satisfait, ajoutez les adresses e-mail de tous les destinataires du rapport.
+. Spécifiez la fréquence, *quotidien* ou *hebdomadaire*, ainsi que le jour, si hebdomadaire, et l'heure à laquelle vous souhaitez que le rapport soit généré et distribué aux destinataires.
+. Sélectionnez le format, soit *PDF*, soit *CSV*.
+. Cliquez sur la coche pour enregistrer le planning du rapport.
++
+image::../media/scheduled-reports.gif[rapports planifiés]
+
++
+Le rapport est envoyé immédiatement sous forme de test. Ensuite, le rapport génère et est envoyé par e-mail aux destinataires répertoriés à l'aide de la fréquence spécifiée.
+
+

@@ -1,0 +1,75 @@
+---
+permalink: online-help/task-provisioning-fileshares.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La page provisionner les charges de travail vous permet de créer des LUN \(prenant en charge les protocoles iSCSI et FCP\) ou des partages de fichiers \(prenant en charge les protocoles CIFS/SMB et NFS\) pour un cluster existant et un SVM \(VM de stockage\) lorsqu"il y a de l"espace disponible.' 
+---
+= Provisionner les workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page provisionner les charges de travail vous permet de créer des LUN (prenant en charge les protocoles iSCSI et FCP) ou des partages de fichiers (prenant en charge les protocoles CIFS/SMB et NFS) pour un cluster existant et un SVM (Storage Virtual machine) lorsqu'il y a de l'espace disponible.
+
+
+
+== Avant de commencer
+
+* Au moins un des services SMB, NFS, iSCSI et FCP doit être activé sur votre VM de stockage. Si vous créez des LUN, iSCSI et FCP doivent être activés.
+* Pour sélectionner et attribuer la règle d'efficacité du stockage et de niveau de service pour la performance au workload, vous devez créer des règles avant de commencer à créer le workload.
+
+
+
+
+== Étapes
+
+. Sur la page *Provision*, ajoutez le nom de la charge de travail à créer, puis sélectionnez le cluster dans la liste disponible sur laquelle vous souhaitez créer la charge de travail.
+. En fonction du cluster sélectionné, le champ *STORAGE VM* filtre les machines virtuelles de stockage disponibles pour ce cluster. Sélectionnez la VM de stockage requise dans la liste.
++
+En fonction des services SMB, NFS, iSCSI et FCP pris en charge sur la VM de stockage, les options NAS et SAN sont activées dans la section informations sur l'hôte.
+
+. Dans la section *stockage et optimisation*, attribuez la capacité de stockage et le niveau de service performances et, éventuellement, définissez la stratégie d'efficacité du stockage pour la charge de travail.
++
+Les spécifications du niveau de services de performances sont appliquées à la charge de travail, et les spécifications de la politique d'efficacité du stockage sont attribuées au volume et à la LUN, le cas échéant, lors de la création de la charge de travail.
+
+. Cochez la case *appliquer les limites de performances* si vous souhaitez appliquer le niveau de service de performances que vous avez attribué à la charge de travail. L'assignation d'un niveau de service de performances à une charge de travail permet de s'assurer que l'agrégat sur lequel la charge de travail est créée peut prendre en charge les objectifs de performance et de capacité définis au niveau de service de performance respectif. Par exemple, si une charge de travail est attribuée à « performances extrêmes », l'agrégat sur lequel la charge de travail est provisionnée doit pouvoir atteindre les objectifs de performances et de capacité du niveau de service de performance extrême, tel que le stockage SSD.
++
+[NOTE]
+====
+Sauf si vous cochez cette case, le niveau de service de performance n'est pas appliqué à la charge de travail. L'état de la charge de travail sur le tableau de bord s'affiche comme non affecté.
+
+====
+. Si vous créez un partage de fichiers SMB et/ou NFS, sélectionnez le bouton *NAS*. Ce bouton est activé uniquement lorsque les services requis sont activés sur la machine virtuelle de stockage.
++
+[NOTE]
+====
+Si votre SVM est activé pour les services SMB et NFS, vous pouvez sélectionner les boutons *share by NFS* et *share by SMB* et créer un partage de fichiers qui prend en charge les protocoles NFS et SMB. Si vous souhaitez créer un partage SMB ou CIFS, sélectionnez uniquement le bouton correspondant.
+
+====
++
+.. Pour les partages de fichiers NFS, spécifiez l'adresse IP de l'hôte ou du réseau pour accéder au volume de partage de fichiers. Vous pouvez entrer des valeurs séparées par des virgules pour plusieurs hôtes.
++
+Lors de l'ajout de l'adresse IP de l'hôte, une vérification interne vérifie la correspondance des détails de l'hôte avec le SVM et la export policy pour cet hôte a été créée, ou lorsqu'il existe une policy existante, elle est réutilisée. Si plusieurs partages NFS sont créés pour le même hôte, une export policy disponible pour le même hôte avec des règles correspondantes est réutilisée pour tous les partages de fichiers. La fonction de définition de règles spécifiques à chaque règle ou de réutilisation de règles s'effectue en fournissant des clés de règles spécifiques lorsque vous provisionnez le partage NFS à l'aide d'API.
+
+.. Pour un partage SMB, spécifiez quels utilisateurs ou groupes d'utilisateurs peuvent accéder au partage SMB et attribuez les autorisations requises. Pour chaque groupe d'utilisateurs, une nouvelle liste de contrôle d'accès (ACL) est générée lors de la création du partage de fichiers.
+
+
+. Pour créer des LUN, sélectionnez le bouton *SAN*. Ce bouton n'est activé que lorsque les services requis sont activés sur la machine virtuelle de stockage sélectionnée.
++
+.. Sélectionnez le système d'exploitation hôte.
+.. Spécifier le mappage d'hôte pour la LUN. Vous pouvez attribuer des groupes initiateurs (igroups) existants ou définir et mapper de nouveaux groupes initiateurs avec des LUN pour contrôler quels initiateurs ont accès aux LUN.
++
+
+NOTE: Si vous créez un nouveau groupe initiateur lors du provisionnement de la LUN, vous devez attendre le cycle de détection suivant (jusqu'à 15 minutes) pour l'utiliser pour la création de LUN. Il est donc recommandé d'utiliser un groupe initiateur existant dans la liste des igroups disponibles.
+
++
+Si vous souhaitez créer un nouveau groupe initiateur, sélectionnez le bouton *Créer un nouveau groupe initiateur*, puis saisissez les informations requises pour créer le groupe initiateur.
+
+
+
+. Cliquez sur *Enregistrer*.
+
+
+La charge de travail est ajoutée à la liste des charges de travail de stockage.
