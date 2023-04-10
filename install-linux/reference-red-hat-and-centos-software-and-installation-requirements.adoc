@@ -74,7 +74,7 @@ Pour plus d'informations sur le Gestionnaire d'abonnement Red Hat, reportez-vous
 Si le référentiel EPEL n'est pas configuré sur votre système, vous devez télécharger et configurer manuellement le référentiel.
 
 +
-link:task-manually-configuring-the-epel-repository.adoc["Configuration manuelle du référentiel EPEL"]
+link:task-manually-configuring-the-epel-repository.html["Configuration manuelle du référentiel EPEL"]
 
 * Si la version correcte de MySQL n'est pas installée, vous devez activer le référentiel MySQL pour installer correctement le logiciel MySQL sur votre système.
 +

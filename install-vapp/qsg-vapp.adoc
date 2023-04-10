@@ -18,7 +18,7 @@ summary: Guide de démarrage rapide pour Unified Manager sur une plateforme VMwa
 * Espace disque libre : 5 Go (provisionnement fin), 152 Go (provisionnement lourd)
 
 
-Pour plus de détails sur la configuration requise, reportez-vous à la section link:./install-vapp/concept-requirements-for-installing-unified-manager.html["Conditions requises pour l'installation de Unified Manager"] et link:http://mysupport.netapp.com/matrix["Matrice d'interopérabilité"].
+Pour plus de détails sur la configuration requise, reportez-vous à la section link:concept-requirements-for-installing-unified-manager.html["Conditions requises pour l'installation de Unified Manager"] et link:http://mysupport.netapp.com/matrix["Matrice d'interopérabilité"].
 
 
 

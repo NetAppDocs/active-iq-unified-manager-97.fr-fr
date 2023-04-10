@@ -29,7 +29,7 @@ Unified Manager est pris en charge sur le système d'exploitation Windows 64 bit
 * Espace disque libre : 100 Go d'espace disque pour le répertoire d'installation, 50 Go d'espace disque pour le répertoire de données MySQL
 
 
-Pour plus de détails sur la configuration requise, reportez-vous à la section link:./install-windows/concept-requirements-for-installing-unified-manager.html["Conditions requises pour l'installation de Unified Manager"] et link:http://mysupport.netapp.com/matrix["Matrice d'interopérabilité"].
+Pour plus de détails sur la configuration requise, reportez-vous à la section link:concept-requirements-for-installing-unified-manager.html["Conditions requises pour l'installation de Unified Manager"] et link:http://mysupport.netapp.com/matrix["Matrice d'interopérabilité"].
 
 
 
@@ -47,7 +47,7 @@ Pour plus de détails sur la configuration requise, reportez-vous à la section 
 
 === Installez Unified Manager
 
-Pour installer Unified Manager, assurez-vous que Microsoft .NET 4.5.2 ou une version ultérieure est installée. Dans le cadre du processus d'installation, Unified Manager installe d'autres modules tiers, le cas échéant. Pour plus d'informations sur les logiciels dépendants, reportez-vous à la link:./install-windows/reference-windows-software-and-installation-requirements.html["Conditions requises pour l'installation et le logiciel Windows"].
+Pour installer Unified Manager, assurez-vous que Microsoft .NET 4.5.2 ou une version ultérieure est installée. Dans le cadre du processus d'installation, Unified Manager installe d'autres modules tiers, le cas échéant. Pour plus d'informations sur les logiciels dépendants, reportez-vous à la link:reference-windows-software-and-installation-requirements.html["Conditions requises pour l'installation et le logiciel Windows"].
 
 . Connectez-vous à Windows à l'aide du compte d'administrateur local par défaut.
 . Dans le répertoire dans lequel vous avez téléchargé le fichier d'installation, cliquez avec le bouton droit de la souris et exécutez le fichier exécutable Unified Manager (.exe) en tant qu'administrateur.

@@ -13,6 +13,4 @@ summary: 'Active IQ Unified Manager prend en charge à la fois la QoS classique 
 [role="lead"]
 Active IQ Unified Manager prend en charge la QoS classique et la QoS adaptative (AQoS) associées aux charges de travail de stockage gérées par Unified Manager.
 
-Si vous mettez à niveau vos clusters ONTAP de 9.1 à 9.3 (pour les partages de fichiers) et 9.4 (pour les LUN), vous pouvez mettre à niveau la QoS classique des workloads respectifs gérés par Unified Manager vers AQoS. Pour plus d'informations, voir
-
-https://kb.netapp.com/app/answers/answer_view/a_id/1087379["Comment mettre à niveau les charges de travail gérées par Unified Manager, d'une QoS classique à une qualité de service AQoS après la mise à niveau du cluster"]
+Si vous mettez à niveau vos clusters ONTAP de 9.1 à 9.3 (pour les partages de fichiers) et 9.4 (pour les LUN), vous pouvez mettre à niveau la QoS classique des workloads respectifs gérés par Unified Manager vers AQoS.

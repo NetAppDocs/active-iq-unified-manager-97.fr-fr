@@ -43,7 +43,7 @@ Affiche les graphiques correspondant à la latence, au débit (IOPS et Mo/s) et 
 +
 ** *Latence* affiche la latence de la charge de travail. Ce graphique présente trois vues qui vous permettent de voir la latence totale, la latence divisée par les opérations de lecture, d'écriture et autres processus, et la latence divisée par le composant de cluster.
 +
-Voir link:concept-cluster-components-and-why-they-can-be-in-contention.adoc["Les composants du cluster et les conflits"] pour obtenir une description des composants du cluster qui sont affichés ici.
+Voir link:concept-cluster-components-and-why-they-can-be-in-contention.html["Les composants du cluster et les conflits"] pour obtenir une description des composants du cluster qui sont affichés ici.
 
 ** *Throughput* affiche à la fois le débit en IOPS et en Mo/s pour la charge de travail. Deux vues vous permettent de voir le débit total et le débit ventilées par lecture, écriture et autres processus.
 +

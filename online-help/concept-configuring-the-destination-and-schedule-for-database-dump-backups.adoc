@@ -34,7 +34,7 @@ La première sauvegarde est effectuée moins de temps que les sauvegardes suivan
 
 [NOTE]
 ====
-Si vous constatez que le nombre de fichiers de sauvegarde incrémentielle est trop important pour l'espace alloué aux sauvegardes, reportez-vous à la section https://kb.netapp.com/app/answers/answer_view/a_id/1087704/loc/en_US["Réponse de la base de connaissances 1087704"] pour savoir comment vous pouvez créer une nouvelle sauvegarde complète régulièrement pour remplacer l'ancienne sauvegarde complète et tous ses fichiers incrémentiels enfant.
+Si vous constatez que le nombre de fichiers de sauvegarde incrémentielle est trop important pour l'espace que vous avez alloué aux sauvegardes, vous pouvez créer une nouvelle sauvegarde complète périodiquement pour remplacer l'ancienne sauvegarde complète et tous ses fichiers incrémentiels enfants.
 
 ====
 

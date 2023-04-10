@@ -56,7 +56,7 @@ Les serveurs vCenter acceptent des caractères spéciaux (tels que %, &, *, $, #
 . Cliquez sur la flèche vers le bas en regard de la machine virtuelle pour afficher la vue résumée de la topologie des composants au niveau des couches de calcul, de réseau et de stockage. Le nœud présentant des problèmes de latence est mis en évidence. La vue résumée présente la pire latence des composants. Par exemple, si une machine virtuelle possède plusieurs disques virtuels, cette vue affiche le disque virtuel qui présente la latence la plus faible parmi tous les disques virtuels.
 . Pour analyser la latence et le débit du datastore sur une période donnée, cliquez sur le bouton *Workload Analyzer* situé en haut de l'icône de l'objet datastore. Vous accédez à la page analyse de la charge de travail, où vous pouvez sélectionner une plage horaire et afficher les graphiques de performances du datastore. Pour plus d'informations sur l'analyseur de charge de travail, reportez-vous à la section _Dépannage des charges de travail à l'aide de l'analyseur de charge de travail_.
 +
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["Dépannage des charges de travail à l'aide de l'analyseur de workloads"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["Dépannage des charges de travail à l'aide de l'analyseur de workloads"]
 
 
 

@@ -42,7 +42,7 @@ Sur l'écran toutes les charges de travail, vous pouvez afficher toutes les char
 
 Cette page vous permet également d'afficher les performances détaillées d'une charge de travail. Vous pouvez afficher des informations détaillées sur les IOPS, la capacité et la latence de la charge de travail en cliquant sur le bouton *choisir / Commander les colonnes* et en sélectionnant des colonnes spécifiques à afficher. La colonne vue des performances affiche les IOPS moyennes et maximales d'une charge de travail. Vous pouvez cliquer sur l'icône de l'analyseur de workloads pour afficher l'analyse détaillée des IOPS. Le bouton *Analyze Workload* de la fenêtre contextuelle analyse d'IOPS vous permet d'accéder à la page analyse de charge de travail, où vous pouvez sélectionner une plage de temps et afficher les tendances de latence, de débit et de capacité de la charge de travail sélectionnée. Pour plus d'informations sur l'analyseur de charge de travail, reportez-vous à la section _Dépannage des charges de travail à l'aide de l'analyseur de charge de travail_
 
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["Dépannage des charges de travail à l'aide de l'analyseur de workloads"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["Dépannage des charges de travail à l'aide de l'analyseur de workloads"]
 
 
 
