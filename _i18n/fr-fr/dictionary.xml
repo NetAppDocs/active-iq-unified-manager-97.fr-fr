@@ -2604,7 +2604,6 @@
   <block id="67d49e16538979c413ddeb36f029388c" category="list-text">Vous pouvez modifier *Nom de l'horaire*, *liste des destinataires*, *fréquence*, *jour* (pour la semaine), *heure*, Et *format* pour le calendrier des rapports.</block>
   <block id="3c089aca469ff81256c133ec51b447ce" category="list-text">Lorsque vous avez terminé, cliquez sur la coche pour enregistrer vos modifications.</block>
   <block id="91d9102f2b20d2487525cb47bf7d79a5" category="summary">Documentation pour Active IQ Unified Manager, AIQUM docs, UM docs</block>
-  <block id="4a58c6ba2ac7cf0f2cd001d223b14e50" category="doc">Documentation Active IQ Unified Manager</block>
   <block id="c33d5314a6e7b078bf9d71b8e0c1ea51" category="summary">Pour accéder à l'interface utilisateur de Unified Manager, vous devez utiliser un navigateur pris en charge.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Navigateurs pris en charge</block>
   <block id="db5dfad2e62d29ace046414904d6d365" category="paragraph">Consultez la matrice d'interopérabilité pour obtenir la liste des versions de navigateur prises en charge.</block>
@@ -12478,4 +12477,5 @@
   <block id="ec41073735b02d172b0bc1ee60ea5ec9" category="paragraph"><block ref="ec41073735b02d172b0bc1ee60ea5ec9" category="inline-link-rx"></block></block>
   <block id="20bde173581d26c0c8c8f826587fe6b1" category="paragraph">Lorsque vous affichez tous les clusters, ce panneau affiche le nombre de clusters conformes ou non, le nombre de SVM conformes ou non, et le nombre de volumes chiffrés ou non chiffrés. La conformité est basée sur le<block ref="736160f7960b3abe2152eecfe71d1435" category="inline-link-rx"></block>. Cliquez sur la flèche droite en haut du panneau pour afficher les détails de sécurité de tous les clusters de la page sécurité.</block>
   <block id="796f4a9be8e525f7e4d64c24bac529c9" category="paragraph"><block ref="796f4a9be8e525f7e4d64c24bac529c9" category="inline-link-rx"></block></block>
+  <block id="dd5452c4b1a9b73792ee149d9b8c4bd0" category="sidebar">Documentation Active IQ Unified Manager 9.7</block>
 </blocks>
